@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CareSpace</string>
+    <string name="uppercase_app_name">CARESPACE</string>
+    <string name="back">BACK</string>
+    <string name="Login_txt">LOGIN</string>
+</resources>

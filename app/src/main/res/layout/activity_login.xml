@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.Login"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uppercase_app_name"
+        android:layout_gravity="center_horizontal"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="100dp"
+        />
+
+    <Button
+        android:id="@+id/google_signInbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sign in with google"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_edge"/>
+
+    <Button
+        android:id="@+id/register_wEmail_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="register with email "
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edge"/>
+
+    <Button
+        android:id="@+id/logInbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login to existing account"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edge"/>
+
+
+</LinearLayout>
