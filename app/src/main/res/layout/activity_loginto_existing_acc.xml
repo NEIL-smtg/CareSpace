@@ -55,7 +55,7 @@
                 android:inputType="textMultiLine"
                 android:maxLength="100"
                 android:padding="10dp"
-                android:text="sunghui2000@hotmail.commmmmmmmmmmmmmmmmmmmmmmm"
+                android:text="sunghui2000@hotmail.com"
                 android:textSize="14sp" />
 
         </TableRow>
