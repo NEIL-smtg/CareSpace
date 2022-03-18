@@ -3,6 +3,9 @@
     <string name="uppercase_app_name">CARESPACE</string>
     <string name="back">BACK</string>
     <string name="Login_txt">LOGIN</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_map_key">AIzaSyBX8uVxWm3SY56wTTaPDuBWcelRlBviUUA</string>
+    <string name="gps_network_not_enabled">To continue, turn on device location, which uses Google\'s location service</string>
+    <string name="go_to_location_setting">Go to location setting</string>
+    <string name="cancel">Cancel</string>
+
 </resources>
