@@ -34,7 +34,7 @@
             android:name=".login.Register"
             android:exported="false" />
         <activity
-            android:name=".MainPage.MainPage"
+            android:name=".Nearby.NearbySearch"
             android:exported="false" />
         <activity
             android:name=".login.Login"

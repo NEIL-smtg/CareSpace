@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.carespace.MainPage.MainPage;
 import com.example.carespace.R;
 import com.example.carespace.login.Login;
 import com.google.firebase.auth.FirebaseAuth;

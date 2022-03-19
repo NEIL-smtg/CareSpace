@@ -7,5 +7,6 @@
     <string name="gps_network_not_enabled">To continue, turn on device location, which uses Google\'s location service</string>
     <string name="go_to_location_setting">Go to location setting</string>
     <string name="cancel">Cancel</string>
+    <string name="here">You are here</string>
 
 </resources>

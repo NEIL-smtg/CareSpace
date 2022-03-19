@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.carespace.MainPage.MainPage;
+import com.example.carespace.Nearby.NearbySearch;
 import com.example.carespace.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -105,7 +105,7 @@ public class Login extends AppCompatActivity {
         if (user != null)
         {
             //jump to menu
-            startActivity(new Intent(Login.this, MainPage.class));
+            startActivity(new Intent(Login.this, NearbySearch.class));
         }
     }
 
@@ -158,7 +158,7 @@ public class Login extends AppCompatActivity {
                             reference.child("info").setValue(username);
 
                             // Sign in success, update UI with the signed-in user's information
-                            Intent intent = new Intent(Login.this,MainPage.class);
+                            Intent intent = new Intent(Login.this, NearbySearch.class);
                             startActivity(intent);
 
                         } else {
