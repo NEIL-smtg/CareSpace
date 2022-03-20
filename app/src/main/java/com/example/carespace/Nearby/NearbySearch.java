@@ -23,6 +23,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.carespace.JsonParser;
+import com.example.carespace.MainPage.MainPage;
 import com.example.carespace.R;
 import com.example.carespace.logout.LogOut;
 import com.google.android.gms.common.api.ApiException;
@@ -69,14 +70,20 @@ import java.util.List;
 
 public class NearbySearch extends AppCompatActivity {
 
-    Spinner spType;
-    Button btFind;
-    SupportMapFragment supportMapFragment;
-    GoogleMap map;
-    FusedLocationProviderClient fusedLocationProviderClient;
-    double currentLat = 0, currentLong = 0;
+    //widgets
+    private Spinner spType;
+    private Button btFind,back;
 
-    //protected static final int REQUEST_CHECK_SETTINGS = 0x1;
+    //map
+    private SupportMapFragment supportMapFragment;
+    private GoogleMap map;
+
+    //location
+    private FusedLocationProviderClient fusedLocationProviderClient;
+
+    //vars
+    private double currentLat = 0, currentLong = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,8 +91,19 @@ public class NearbySearch extends AppCompatActivity {
         setContentView(R.layout.activity_nearby_search);
 
         spType = (Spinner) findViewById(R.id.sp_type);
+
+        back = (Button) findViewById(R.id.btnbackNearby) ;
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NearbySearch.this, MainPage.class));
+                finish();
+            }
+        });
+
         btFind = (Button) findViewById(R.id.bt_find);
-        btFind.setClickable(false);
+        btFind.setClickable(false); //unclickable when location is disabled to avoid rum time exceeded
+
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
 
         //initialize array of place type

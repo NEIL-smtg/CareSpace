@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#807D7D</color>
     <color name="transparent">#cccccc</color>
+    <color name="tabLayoutColor">#EEE</color>
+    <color name="blue">#00F</color>
 </resources>

@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.carespace.Nearby.NearbySearch;
+import com.example.carespace.MainPage.MainPage;
 import com.example.carespace.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -71,7 +71,7 @@ public class LogintoExistingAcc extends AppCompatActivity {
                                 {
                                     dialog.dismiss();
                                     Toast.makeText(LogintoExistingAcc.this, "Login successfully", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), NearbySearch.class));
+                                    startActivity(new Intent(getApplicationContext(), MainPage.class));
                                     finish();
                                 }
                             })

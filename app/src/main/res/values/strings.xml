@@ -3,10 +3,27 @@
     <string name="uppercase_app_name">CARESPACE</string>
     <string name="back">BACK</string>
     <string name="Login_txt">LOGIN</string>
+    <string name="cancel">Cancel</string>
+    <string name="doubleTapExit">Please click BACK again to exit</string>
+
+    <!-- api map key -->
     <string name="google_map_key">AIzaSyBX8uVxWm3SY56wTTaPDuBWcelRlBviUUA</string>
+
+    <!--nearby -->
     <string name="gps_network_not_enabled">To continue, turn on device location, which uses Google\'s location service</string>
     <string name="go_to_location_setting">Go to location setting</string>
-    <string name="cancel">Cancel</string>
+    <string name="nearby">Nearby Medical Center</string>
     <string name="here">You are here</string>
+
+    <!--sleep -->
+    <string name="sleep">Sleep</string>
+    <string name="sleep_desc">Relax your mind and fall into a deep, restful sleep</string>
+    <string name="soundscape">Soundscapes</string>
+    <string name="asmr">ASMR</string>
+    <string name="sleepbetter">Sleep Better</string>
+    <string name="anxious">Anxious</string>
+    <string name="depressed">Depressed</string>
+    <string name="feelingdown">Feeling Down</string>
+    <string name="coaching">Coaching</string>
 
 </resources>

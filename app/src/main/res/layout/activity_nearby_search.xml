@@ -11,8 +11,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal"
         >
+
+        <Button
+            android:id="@+id/btnbackNearby"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="&#60;"
+            android:textColor="@color/purple_700"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"/>
         
         <Spinner
             android:layout_width="wrap_content"
@@ -25,7 +38,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bt_find"
-            android:text="find"/>
+            android:text="search"
+            android:background="@android:color/transparent"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"/>
         
         
     </LinearLayout>
