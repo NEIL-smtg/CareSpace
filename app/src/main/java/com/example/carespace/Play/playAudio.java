@@ -1,9 +1,12 @@
 package com.example.carespace.Play;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -14,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.example.carespace.MainPage.AudioAdapter;
 import com.example.carespace.R;
 
@@ -28,7 +33,7 @@ public class playAudio extends AppCompatActivity {
     //vars
     private String name;
     private int position=-1;
-    private int resid;
+    private int resid_audioFile;
 
     //media player
     static MediaPlayer mediaPlayer;
@@ -56,9 +61,16 @@ public class playAudio extends AppCompatActivity {
         repeat = (ImageButton) findViewById(R.id.btn_repeat);
         coverImg = (ImageView) findViewById(R.id.img_playAudio);
         seekBar = (SeekBar) findViewById(R.id.seekbar_audioPlay);
-        back = (TextView) findViewById(R.id.backbtn_playAudio);
 
-        audioAdapter = new AudioAdapter(this);
+        back = (TextView) findViewById(R.id.backbtn_playAudio);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        audioAdapter = new AudioAdapter();
 
         //get neccessary data from previous intent
         getIncomingIntent();
@@ -69,8 +81,6 @@ public class playAudio extends AppCompatActivity {
         //set up media player
         setupPlayer();
 
-        //set up buttons listener
-        setupListener();
     }
 
     private void getIncomingIntent()
@@ -79,21 +89,16 @@ public class playAudio extends AppCompatActivity {
         name = name.replace(" ","");
         name = name.toLowerCase();
 
-        resid = getResources().getIdentifier(name,"raw",getPackageName());
+        resid_audioFile = getResources().getIdentifier(name,"raw",getPackageName());
 
         position = getIntent().getIntExtra("position",-1);
     }
 
     private void setupWidgets()
     {
-        AudioAdapter audioAdapter = new AudioAdapter(this);
         category.setText(audioAdapter.Category[position]);
         song_name.setText(audioAdapter.audioNameList[position]);
-
-        Glide
-                .with(this)
-                .load(audioAdapter.audioImages[position])
-                .into(coverImg);
+        coverImg.setBackgroundResource(audioAdapter.audioImages[position]);
     }
 
     private void setupPlayer()
@@ -102,20 +107,20 @@ public class playAudio extends AppCompatActivity {
         {
             mediaPlayer.stop();
             mediaPlayer.release();
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), resid);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), resid_audioFile);
             mediaPlayer.start();
-            play.setImageResource(R.drawable.ic_pause);
+            setPauseBtn();
         }
         else
         {
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), resid);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), resid_audioFile);
             mediaPlayer.start();
-            play.setImageResource(R.drawable.ic_pause);
+            setPauseBtn();
         }
 
-        //set max
-        seekBar.setMax(mediaPlayer.getDuration()/1000);
-        durationTotal.setText(formattedTime(mediaPlayer.getDuration()/1000));
+        //calculate duration time of music
+        seekBarSetMax();
+        resetSeekBar_durationMusic();
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -133,18 +138,7 @@ public class playAudio extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) { }
         });
 
-        playAudio.this.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (mediaPlayer != null)
-                {
-                    int mCurrentPosition = mediaPlayer.getCurrentPosition()/1000;
-                    seekBar.setProgress(mCurrentPosition);
-                    durationPlayed.setText(formattedTime(mCurrentPosition));
-                }
-                handler.postDelayed(this,1000);
-            }
-        });
+        runonUIThread();
 
     }
 
@@ -165,17 +159,6 @@ public class playAudio extends AppCompatActivity {
         {
             return totalout;
         }
-    }
-
-    private void setupListener()
-    {
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-
     }
 
     @Override
@@ -210,41 +193,33 @@ public class playAudio extends AppCompatActivity {
         {
             mediaPlayer.stop();
             mediaPlayer.release();
-            if (position >= 0)
+            if (position > 0)
             {
                 position--;
+            }
+            else
+            {
+                position =0;
             }
 
 
             name = audioAdapter.audioNameList[position];
             name = name.replace(" ","");
             name = name.toLowerCase();
-            resid = getResources().getIdentifier(name,"raw",getPackageName());
+            resid_audioFile = getResources().getIdentifier(name,"raw",getPackageName());
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(),resid);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), resid_audioFile);
 
-            category.setText(audioAdapter.Category[position]);
-            song_name.setText(audioAdapter.audioNameList[position]);
+            resetSeekBar_durationMusic();
 
-            Glide
-                    .with(this)
-                    .load(audioAdapter.audioImages[position])
-                    .into(coverImg);
+            setupWidgets();
 
-            seekBar.setMax(mediaPlayer.getDuration()/1000);
-            playAudio.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (mediaPlayer != null)
-                    {
-                        int mCurrentPosition = mediaPlayer.getCurrentPosition()/1000;
-                        seekBar.setProgress(mCurrentPosition);
-                    }
-                    handler.postDelayed(this,1000);
-                }
-            });
+            seekBarSetMax();
 
-            play.setImageResource(R.drawable.ic_pause);
+            runonUIThread();
+
+            //play the music
+            mediaPlayer.start();
         }
     }
 
@@ -272,7 +247,7 @@ public class playAudio extends AppCompatActivity {
         {
             mediaPlayer.stop();
             mediaPlayer.release();
-            if (position <4)
+            if (position <3)
             {
                 position+=1;
             }
@@ -280,35 +255,24 @@ public class playAudio extends AppCompatActivity {
             {
                 position = 0;
             }
+
             name = audioAdapter.audioNameList[position];
             name = name.replace(" ","");
             name = name.toLowerCase();
-            resid = getResources().getIdentifier(name,"raw",getPackageName());
+            resid_audioFile = getResources().getIdentifier(name,"raw",getPackageName());
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(),resid);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), resid_audioFile);
 
-            category.setText(audioAdapter.Category[position]);
-            song_name.setText(audioAdapter.audioNameList[position]);
+            resetSeekBar_durationMusic();
 
-            Glide
-                    .with(this)
-                    .load(audioAdapter.audioImages[position])
-                    .into(coverImg);
+            setupWidgets();
 
-            seekBar.setMax(mediaPlayer.getDuration()/1000);
-            playAudio.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (mediaPlayer != null)
-                    {
-                        int mCurrentPosition = mediaPlayer.getCurrentPosition()/1000;
-                        seekBar.setProgress(mCurrentPosition);
-                    }
-                    handler.postDelayed(this,1000);
-                }
-            });
+            seekBarSetMax();
 
-            play.setImageResource(R.drawable.ic_pause);
+            runonUIThread();
+
+            //play music
+            mediaPlayer.start();
         }
     }
 
@@ -333,37 +297,55 @@ public class playAudio extends AppCompatActivity {
     {
         if (mediaPlayer.isPlaying())
         {
-            play.setImageResource(R.drawable.ic_play);
+            setPlaybtn();
             mediaPlayer.pause();
-            seekBar.setMax(mediaPlayer.getDuration()/1000);
-            playAudio.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (mediaPlayer != null)
-                    {
-                        int mCurrentPosition = mediaPlayer.getCurrentPosition()/1000;
-                        seekBar.setProgress(mCurrentPosition);
-                    }
-                    handler.postDelayed(this,1000);
-                }
-            });
+            seekBarSetMax();
+            runonUIThread();
         }
         else
         {
-            play.setImageResource(R.drawable.ic_pause);
+            setPauseBtn();
             mediaPlayer.start();
-            seekBar.setMax(mediaPlayer.getDuration()/1000);
-            playAudio.this.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (mediaPlayer != null)
-                    {
-                        int mCurrentPosition = mediaPlayer.getCurrentPosition()/1000;
-                        seekBar.setProgress(mCurrentPosition);
-                    }
-                    handler.postDelayed(this,1000);
-                }
-            });
+            seekBarSetMax();
+            runonUIThread();
         }
+    }
+
+    private void setPauseBtn()
+    {
+        play.setBackgroundResource(R.drawable.ic_pause);
+    }
+
+    private void setPlaybtn()
+    {
+        play.setBackgroundResource(R.drawable.ic_play);
+    }
+
+    private void resetSeekBar_durationMusic()
+    {
+        seekBar.setProgress(0);
+        durationPlayed.setText("0:00");
+        durationTotal.setText(formattedTime(mediaPlayer.getDuration()/1000));
+    }
+
+    private void seekBarSetMax()
+    {
+        seekBar.setMax(mediaPlayer.getDuration()/1000);
+    }
+
+    private void runonUIThread()
+    {
+        playAudio.this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mediaPlayer != null)
+                {
+                    int mCurrentPosition = mediaPlayer.getCurrentPosition()/1000;
+                    seekBar.setProgress(mCurrentPosition);
+                    durationPlayed.setText(formattedTime(mCurrentPosition));
+                }
+                handler.postDelayed(this,1000);
+            }
+        });
     }
 }

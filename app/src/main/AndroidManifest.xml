@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CareSpace">
         <activity
+            android:name=".TimerAlarm.Alarm"
+            android:exported="false" />
+        <activity
             android:name=".Play.playAudio"
             android:exported="false" />
         <activity
@@ -54,6 +57,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".TimerAlarm.AlarmReceiver"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -12,11 +12,12 @@ import android.view.ViewGroup;
 
 import com.example.carespace.Nearby.NearbySearch;
 import com.example.carespace.R;
+import com.example.carespace.TimerAlarm.Alarm;
 
 public class HomeFragment extends Fragment {
 
     //widgets
-    private CardView btnNearbymed;
+    private CardView cardbtnNearbymed,cardbtnTimer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,9 +26,10 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         //widgets
-        btnNearbymed = (CardView) view.findViewById(R.id.btnNearbyMed);
+        cardbtnNearbymed = (CardView) view.findViewById(R.id.cardbtnNearbyMed);
+        cardbtnTimer = (CardView) view.findViewById(R.id.cardbtn_addAlarm);
 
-        btnNearbymed.setOnClickListener(new View.OnClickListener() {
+        cardbtnNearbymed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), NearbySearch.class));
@@ -35,6 +37,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        cardbtnTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Alarm.class));
+            }
+        });
 
         return view;
     }

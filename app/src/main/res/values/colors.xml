@@ -11,4 +11,5 @@
     <color name="transparent">#cccccc</color>
     <color name="tabLayoutColor">#EEE</color>
     <color name="blue">#00F</color>
+    <color name="red">#FF3D00</color>
 </resources>

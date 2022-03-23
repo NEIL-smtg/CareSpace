@@ -5,12 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".MainPage.HomeFragment">
 
+    <!--nearby card -->
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp">
+        android:layout_marginTop="140dp"
+        android:id="@+id/relayout_nearby">
 
         <include layout="@layout/nearby_card_view" />
+
+    </RelativeLayout>
+
+    <!--timer card -->
+    <RelativeLayout
+        android:id="@+id/relaout_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relayout_nearby">
+
+        <include layout="@layout/add_alarm_card"/>
 
     </RelativeLayout>
 

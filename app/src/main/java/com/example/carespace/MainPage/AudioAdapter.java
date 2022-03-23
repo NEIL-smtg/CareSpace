@@ -11,14 +11,9 @@ import com.example.carespace.R;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.Locale;
 
 public class AudioAdapter {
-
-    private Context context;
-
-    public AudioAdapter(Context context) {
-        this.context = context;
-    }
 
     public String[] Category = {
             "Soundscape",
@@ -37,20 +32,6 @@ public class AudioAdapter {
             "Rain Forest Sleep Yoga Meditation"
     };
 
-    public int[] audio ={
-            R.raw.justrelax,
-            R.raw.oldwatermildmeditation,
-            R.raw.goodbyestress,
-            R.raw.rainforestsleepyogameditation
-    };
-
-//    public String[] audioDuration = {
-//            getDuration("justrelax"),
-//            getDuration("oldwatermildmeditation"),
-//            getDuration("goodbyestress"),
-//            getDuration("rainforestsleepyogameditation")
-//    };
-
     public int[] audioImages = {
             R.drawable.audioimg,
             R.drawable.audioimg1,
@@ -58,14 +39,38 @@ public class AudioAdapter {
             R.drawable.sleep
     };
 
+    public String[] audioDuration = new String[4];
 
-    private String getDuration(String filename) {
-        String mediaPath = Uri.parse("android.resource://com.example.carespace/raw/"+filename).getPath();
-        MediaMetadataRetriever mmr = new MediaMetadataRetriever();
-        mmr.setDataSource(mediaPath);
-        String duration = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
-        mmr.release();
+    private Context context;
+    private  int resid_audioFile;
+    private MediaPlayer mediaPlayer;
 
-        return duration;
+    public AudioAdapter(){}
+
+    public AudioAdapter(Context context)
+    {
+        this.context = context;
+        String song_name;
+
+        for (int i = 0; i < audioNameList.length; i++)
+        {
+            song_name = audioNameList[i].toLowerCase();
+            song_name = song_name.replace(" ","");
+
+            resid_audioFile = context.getResources().getIdentifier(song_name, "raw",context.getPackageName());
+
+            mediaPlayer = MediaPlayer.create(context.getApplicationContext(), resid_audioFile);
+            audioDuration[i] = (formattedTime(mediaPlayer.getDuration()/1000));
+
+        }
+
+        mediaPlayer.release();
     }
+
+    private String formattedTime(int mCurrentPosition)
+    {
+        String min =  String.valueOf(mCurrentPosition/60);
+        return min;
+    }
+
 }

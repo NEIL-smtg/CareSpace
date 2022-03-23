@@ -44,7 +44,7 @@ public class SleepRecyclerViewAdapter extends RecyclerView.Adapter<SleepRecycler
 
         holder.name.setText(audioAdapter.audioNameList[holder.getAdapterPosition()]);
         holder.category.setText(audioAdapter.Category[holder.getAdapterPosition()]);
-        holder.duration.setText("audioAdapter.audioDuration[position]");
+        holder.duration.setText(audioAdapter.audioDuration[position] + "min");
 
         Glide
                 .with(context)
