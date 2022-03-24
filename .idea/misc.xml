@@ -14,6 +14,7 @@
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_edge_grey.xml" value="0.1945" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/tab_layout_style.xml" value="0.1945" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/timer_card_gradient.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_alarm.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_gallery_camera_fragment_container.xml" value="0.176" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_log_out.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_login.xml" value="0.264" />
@@ -24,8 +25,10 @@
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_play_audio.xml" value="0.264" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_timer_alarm.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/add_alarm_card.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/addalarm_card.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/addtimer_card.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/alarm_item.xml" value="0.264" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/alarm_picker_dialog.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/alarmpicker_dialog.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/audio_card.xml" value="0.4" />
@@ -34,7 +37,7 @@
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/custom_alarm_comfirmation_dialog.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_camera.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_gallery.xml" value="0.21927083333333333" />
-        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_home.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_profile.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_sleep.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/medicine_alarm_card.xml" value="0.21927083333333333" />

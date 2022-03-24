@@ -2,8 +2,8 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:id="@+id/cardbtn_medicineAlarm"
-    android:layout_width="130dp"
-    android:layout_height="130dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
     app:cardCornerRadius="20dp"

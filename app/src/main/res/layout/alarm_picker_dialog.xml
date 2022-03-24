@@ -67,7 +67,7 @@
                 android:layout_below="@id/relayout_water_alarm"
                 android:layout_centerHorizontal="true">
 
-                <include layout="@layout/custom_alarm_card"/>
+                <include layout="@layout/custom_alarm_card" />
 
             </RelativeLayout>
 

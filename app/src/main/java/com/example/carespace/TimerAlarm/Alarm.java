@@ -4,6 +4,7 @@ import static java.lang.Integer.parseInt;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlarmManager;
 import android.app.Dialog;
@@ -12,6 +13,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -21,11 +23,13 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.carespace.R;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Alarm extends AppCompatActivity {
@@ -41,16 +45,27 @@ public class Alarm extends AppCompatActivity {
     private ImageButton btn_close_addDialog, btnClose_water_alarm, btnConfirm_custom_alarm;
     private NumberPicker alarm_time_picker;
     private EditText edittext_addAlarmDescription;
+    private RecyclerView RV_alarmList;
 
     //const vars
     private static final String WATER_ALARM = "water_alarm";
     private static final String MEDICINE_ALARM = "medicine_alarm";
     private static final String CUSTOM_ALARM = "custom_alarm";
 
+    //list view adapter
+    AlarmListAdapter listAdapter;
+
+    //local database
+    AlarmDatabaseHelper myDB;
+
+    //vars
+    ArrayList<String> db_id, db_title, db_time, db_desc;
+    private int notifyPosition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_timer_alarm);
+        setContentView(R.layout.activity_alarm);
 
         btn_back = (TextView) findViewById(R.id.btnback_alarm);
         btn_back.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +87,51 @@ public class Alarm extends AppCompatActivity {
         timepicker_dialog = new Dialog(this);
         custom_alarm_confirmation_dialog = new Dialog(this);
 
+        myDB = new AlarmDatabaseHelper(Alarm.this);
+        db_id = new ArrayList<>();
+        db_title = new ArrayList<>();
+        db_time = new ArrayList<>();
+        db_desc = new ArrayList<>();
+
+        storeAlarmDataInArrays();
+        notifyPosition = db_id.size()-1;
+        listAdapter = new AlarmListAdapter(Alarm.this,db_id,db_title,db_time,db_desc);
+        RV_alarmList = (RecyclerView) findViewById(R.id.rv_alarmList);
+        RV_alarmList.setAdapter(listAdapter);
+
         createNotificationChannel();
+    }
+
+    private void storeAlarmDataInArrays()
+    {
+        Cursor cursor = myDB.readAllData();
+
+        if (db_id.size() == 0)
+        {
+            if (cursor.getCount() == 0)
+            {
+                Toast.makeText(this, "No alarm", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                while (cursor.moveToNext())
+                {
+                    db_id.add(cursor.getString(0));
+                    db_title.add(cursor.getString(1));
+                    db_time.add(cursor.getString(2));
+                    db_desc.add(cursor.getString(3));
+                }
+            }
+        }
+        else
+        {
+            cursor.moveToLast();
+            db_id.add(cursor.getString(0));
+            db_title.add(cursor.getString(1));
+            db_time.add(cursor.getString(2));
+            db_desc.add(cursor.getString(3));
+        }
+
     }
 
     private void showAlarmPickerDialog()
@@ -148,6 +207,8 @@ public class Alarm extends AppCompatActivity {
                 setRepeatingAlarm(repeating_gap,WATER_ALARM);
                 timepicker_dialog.dismiss();
                 btnDone_water_alarm.setVisibility(View.GONE);
+
+                addToDB(WATER_ALARM,minuteValues[alarm_time_picker.getValue()]);
             }
         });
 
@@ -159,6 +220,9 @@ public class Alarm extends AppCompatActivity {
                 setRepeatingAlarm(repeating_gap,MEDICINE_ALARM);
                 timepicker_dialog.dismiss();
                 btnDone_medicine_alarm.setVisibility(View.GONE);
+
+                addToDB(MEDICINE_ALARM,minuteValues[alarm_time_picker.getValue()]);
+
             }
         });
 
@@ -235,13 +299,17 @@ public class Alarm extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String alarmTime;
+
                 if (customAlarmtimePicker.getHour() > 12)
                 {
-                    alarm_time_txt.setText("Your Alarm : " + (customAlarmtimePicker.getHour()-12) + " : " + String.format("%02d",customAlarmtimePicker.getMinute()) + " PM");
+                    alarmTime = (customAlarmtimePicker.getHour()-12) + " : " + String.format("%02d",customAlarmtimePicker.getMinute()) + " PM";
+                    alarm_time_txt.setText("Your Alarm : " + alarmTime);
                 }
                 else
                 {
-                    alarm_time_txt.setText("Your Alarm :"  + customAlarmtimePicker.getHour() + ":" + String.format("%02d",customAlarmtimePicker.getMinute()) + " AM");
+                    alarmTime =  customAlarmtimePicker.getHour() + ":" + String.format("%02d",customAlarmtimePicker.getMinute()) + " AM";
+                    alarm_time_txt.setText("Your Alarm :" + alarmTime );
                 }
 
 
@@ -259,6 +327,9 @@ public class Alarm extends AppCompatActivity {
                         custom_alarm_confirmation_dialog.dismiss();
                         String alarm_description = edittext_addAlarmDescription.getText().toString();
                         setAlarm(CUSTOM_ALARM,alarm_description);
+
+                        addToDB(CUSTOM_ALARM,alarmTime);
+
                     }
                 });
             }
@@ -328,4 +399,40 @@ public class Alarm extends AppCompatActivity {
 
         alarmManager.cancel(pendingIntent);
     }
+
+    private void addToDB(String alarm_type, String alarmTime)
+    {
+        if (alarm_type.equals(WATER_ALARM))
+        {
+            myDB.addAlarm(
+                    alarm_type,
+                    alarmTime,
+                    "Time to get hydrated !! Drink !!"
+                    );
+
+        }
+        else if (alarm_type.equals(MEDICINE_ALARM))
+        {
+            myDB.addAlarm(
+                    alarm_type,
+                    alarmTime,
+                    "Time to eat medicine !! Get well soon !!"
+            );
+        }
+        else
+        {
+            myDB.addAlarm(
+                    alarm_type,
+                    alarmTime,
+                    edittext_addAlarmDescription.getText().toString()
+            );
+        }
+
+        storeAlarmDataInArrays();
+        notifyPosition++;
+        listAdapter.notifyItemInserted(notifyPosition);
+
+    }
+
+
 }
