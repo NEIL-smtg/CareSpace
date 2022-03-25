@@ -1,4 +1,4 @@
-package com.example.carespace.TimerAlarm;
+package com.example.carespace.Alarm;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -20,6 +20,7 @@ public class AlarmDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_TITLE = "alarm_title";
     private static final String COLUMN_TIME = "alarm_time";
     private static final String COLUMN_DESCRIPTION = "alarm_description";
+    private static final String COLUMN_PENDING_ID = "pending_ID";
 
 
     public AlarmDatabaseHelper(@Nullable Context context) {
@@ -34,7 +35,8 @@ public class AlarmDatabaseHelper extends SQLiteOpenHelper {
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 COLUMN_TITLE + " TEXT, "+
                 COLUMN_TIME + " TEXT, " +
-                COLUMN_DESCRIPTION + " TEXT);";
+                COLUMN_DESCRIPTION + " TEXT, " +
+                COLUMN_PENDING_ID + " INTEGER);";
 
         db.execSQL(query);
 
@@ -47,7 +49,7 @@ public class AlarmDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
     
-    public void addAlarm(String title, String time, String desc)
+    public void addAlarm(String title, String time, String desc, int pending_id)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -55,6 +57,7 @@ public class AlarmDatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_TITLE, title);
         cv.put(COLUMN_TIME, time);
         cv.put(COLUMN_DESCRIPTION, desc);
+        cv.put(COLUMN_PENDING_ID, pending_id);
         long result  = db.insert(TABLE_NAME, null, cv);
         
         if (result == -1)

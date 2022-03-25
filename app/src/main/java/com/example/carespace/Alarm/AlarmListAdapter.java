@@ -1,12 +1,14 @@
-package com.example.carespace.TimerAlarm;
+package com.example.carespace.Alarm;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,14 +20,16 @@ import java.util.ArrayList;
 public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.MyViewHolder> {
 
     private ArrayList<String> db_id, db_title, db_time, db_desc;
+    private ArrayList<Integer> db_pendingID;
     private Context context;
 
-    public AlarmListAdapter(Context context,ArrayList<String> db_id, ArrayList<String> db_title, ArrayList<String> db_time, ArrayList<String> db_desc) {
-        this.context = context;
+    public AlarmListAdapter(Context context,ArrayList<String> db_id, ArrayList<String> db_title, ArrayList<String> db_time, ArrayList<String> db_desc, ArrayList<Integer> db_pendingID) {
         this.db_id = db_id;
         this.db_title = db_title;
         this.db_time = db_time;
         this.db_desc = db_desc;
+        this.db_pendingID = db_pendingID;
+        this.context = context;
     }
 
     @NonNull
@@ -56,16 +60,28 @@ public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.MyVi
 
                 AlarmDatabaseHelper myDB = new AlarmDatabaseHelper(context);
                 myDB.deleteOneRow(db_id.get(holder.getAdapterPosition()));
+                deleteAlarm(db_pendingID.get(holder.getAdapterPosition()));
 
                 db_desc.remove(holder.getAdapterPosition());
                 db_id.remove(holder.getAdapterPosition());
                 db_time.remove(holder.getAdapterPosition());
                 db_title.remove(holder.getAdapterPosition());
+                db_pendingID.remove(holder.getAdapterPosition());
 
                 notifyItemRemoved(holder.getAdapterPosition());
-
             }
         });
+    }
+
+    private void deleteAlarm(int pending_id)
+    {
+        Intent intent = new Intent(context,AlarmReceiver.class);
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context,pending_id,intent,0);
+
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+        alarmManager.cancel(pendingIntent);
     }
 
     @Override
@@ -89,19 +105,4 @@ public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.MyVi
         }
     }
 
-    public ArrayList<String> getDb_id() {
-        return db_id;
-    }
-
-    public ArrayList<String> getDb_title() {
-        return db_title;
-    }
-
-    public ArrayList<String> getDb_time() {
-        return db_time;
-    }
-
-    public ArrayList<String> getDb_desc() {
-        return db_desc;
-    }
 }

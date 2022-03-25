@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -17,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CareSpace">
         <activity
-            android:name=".TimerAlarm.Alarm"
+            android:name=".Alarm.Alarm"
             android:exported="false" />
         <activity
             android:name=".Play.playAudio"
@@ -58,7 +59,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".TimerAlarm.AlarmReceiver"/>
+        <receiver android:name=".Alarm.AlarmReceiver"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

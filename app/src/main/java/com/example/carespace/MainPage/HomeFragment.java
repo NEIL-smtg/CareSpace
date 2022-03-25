@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.carespace.Nearby.NearbySearch;
 import com.example.carespace.R;
-import com.example.carespace.TimerAlarm.Alarm;
+import com.example.carespace.Alarm.Alarm;
 
 public class HomeFragment extends Fragment {
 

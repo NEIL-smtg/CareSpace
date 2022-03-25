@@ -1,4 +1,4 @@
-package com.example.carespace.TimerAlarm;
+package com.example.carespace.Alarm;
 
 import static java.lang.Integer.parseInt;
 
@@ -60,6 +60,7 @@ public class Alarm extends AppCompatActivity {
 
     //vars
     ArrayList<String> db_id, db_title, db_time, db_desc;
+    ArrayList<Integer> db_pendingID;
     private int notifyPosition;
 
     @Override
@@ -92,10 +93,11 @@ public class Alarm extends AppCompatActivity {
         db_title = new ArrayList<>();
         db_time = new ArrayList<>();
         db_desc = new ArrayList<>();
+        db_pendingID = new ArrayList<>();
 
         storeAlarmDataInArrays();
         notifyPosition = db_id.size()-1;
-        listAdapter = new AlarmListAdapter(Alarm.this,db_id,db_title,db_time,db_desc);
+        listAdapter = new AlarmListAdapter(Alarm.this,db_id,db_title,db_time,db_desc,db_pendingID);
         RV_alarmList = (RecyclerView) findViewById(R.id.rv_alarmList);
         RV_alarmList.setAdapter(listAdapter);
 
@@ -120,6 +122,7 @@ public class Alarm extends AppCompatActivity {
                     db_title.add(cursor.getString(1));
                     db_time.add(cursor.getString(2));
                     db_desc.add(cursor.getString(3));
+                    db_pendingID.add(cursor.getInt(4));
                 }
             }
         }
@@ -130,6 +133,7 @@ public class Alarm extends AppCompatActivity {
             db_title.add(cursor.getString(1));
             db_time.add(cursor.getString(2));
             db_desc.add(cursor.getString(3));
+            db_pendingID.add(cursor.getInt(4));
         }
 
     }
@@ -178,7 +182,7 @@ public class Alarm extends AppCompatActivity {
 
         alarm_time_picker.setDisplayedValues(minuteValues);
 
-        //0-9, size = 10
+        //size = 10, index = 9
         alarm_time_picker.setMaxValue(minuteValues.length-1);
 
         //water alarm card on click
@@ -208,7 +212,7 @@ public class Alarm extends AppCompatActivity {
                 timepicker_dialog.dismiss();
                 btnDone_water_alarm.setVisibility(View.GONE);
 
-                addToDB(WATER_ALARM,minuteValues[alarm_time_picker.getValue()]);
+
             }
         });
 
@@ -220,8 +224,6 @@ public class Alarm extends AppCompatActivity {
                 setRepeatingAlarm(repeating_gap,MEDICINE_ALARM);
                 timepicker_dialog.dismiss();
                 btnDone_medicine_alarm.setVisibility(View.GONE);
-
-                addToDB(MEDICINE_ALARM,minuteValues[alarm_time_picker.getValue()]);
 
             }
         });
@@ -326,9 +328,7 @@ public class Alarm extends AppCompatActivity {
                     public void onClick(View view) {
                         custom_alarm_confirmation_dialog.dismiss();
                         String alarm_description = edittext_addAlarmDescription.getText().toString();
-                        setAlarm(CUSTOM_ALARM,alarm_description);
-
-                        addToDB(CUSTOM_ALARM,alarmTime);
+                        setAlarm(CUSTOM_ALARM,alarm_description,alarmTime);
 
                     }
                 });
@@ -336,16 +336,18 @@ public class Alarm extends AppCompatActivity {
         });
     }
 
-    private void setAlarm(String alarm_type, String alarm_description)
+    private void setAlarm(String alarm_type, String alarm_description, String alarmTime)
     {
         alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-        Intent intent = new Intent(this,AlarmReceiver.class);
-        intent.putExtra("alarm_type",CUSTOM_ALARM);
-        intent.putExtra("alarm_description",alarm_description);
+        final int pending_id = (int) System.currentTimeMillis();
 
-        final int id = (int) System.currentTimeMillis();
-        pendingIntent = PendingIntent.getBroadcast(this,id,intent,0);
+        Intent intent = new Intent(this,AlarmReceiver.class);
+        intent.putExtra("alarm_type",alarm_type);
+        intent.putExtra("alarm_description",alarm_description);
+        intent.putExtra("pending_ID",pending_id);
+
+        pendingIntent = PendingIntent.getBroadcast(this,pending_id,intent,0);
 
         alarmManager.setExact
                 (
@@ -354,6 +356,9 @@ public class Alarm extends AppCompatActivity {
                         //AlarmManager.INTERVAL_DAY,
                         pendingIntent
                 );
+
+        addToDB(alarm_type,alarmTime,pending_id);
+
     }
 
     private void setRepeatingAlarm(int repeating_gap, String alarm_type)
@@ -362,7 +367,10 @@ public class Alarm extends AppCompatActivity {
 
         alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
+        final int pending_id = (int) System.currentTimeMillis();
+
         Intent intent = new Intent(this,AlarmReceiver.class);
+        intent.putExtra("pending_ID",pending_id);
 
         if (alarm_type.equals(WATER_ALARM))
         {
@@ -374,8 +382,7 @@ public class Alarm extends AppCompatActivity {
             intent.putExtra("alarm_type",MEDICINE_ALARM);
         }
 
-        final int id = (int) System.currentTimeMillis();
-        pendingIntent = PendingIntent.getBroadcast(this,id,intent,0);
+        pendingIntent = PendingIntent.getBroadcast(this,pending_id,intent,0);
 
         alarmManager.setRepeating
                 (
@@ -384,30 +391,19 @@ public class Alarm extends AppCompatActivity {
                         repeating_gap*1000*60,
                         pendingIntent
                 );
+
+        addToDB(alarm_type,String.valueOf(repeating_gap), pending_id);
     }
 
-    private void deleteAlarm()
-    {
-        alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-
-        Intent intent = new Intent(this,AlarmReceiver.class);
-
-        if (alarmManager == null)
-        {
-            alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        }
-
-        alarmManager.cancel(pendingIntent);
-    }
-
-    private void addToDB(String alarm_type, String alarmTime)
+    private void addToDB(String alarm_type, String alarmTime, int pending_id)
     {
         if (alarm_type.equals(WATER_ALARM))
         {
             myDB.addAlarm(
                     alarm_type,
                     alarmTime,
-                    "Time to get hydrated !! Drink !!"
+                    "Time to get hydrated !! Drink !!",
+                    pending_id
                     );
 
         }
@@ -416,7 +412,8 @@ public class Alarm extends AppCompatActivity {
             myDB.addAlarm(
                     alarm_type,
                     alarmTime,
-                    "Time to eat medicine !! Get well soon !!"
+                    "Time to eat medicine !! Get well soon !!",
+                    pending_id
             );
         }
         else
@@ -424,7 +421,8 @@ public class Alarm extends AppCompatActivity {
             myDB.addAlarm(
                     alarm_type,
                     alarmTime,
-                    edittext_addAlarmDescription.getText().toString()
+                    edittext_addAlarmDescription.getText().toString(),
+                    pending_id
             );
         }
 

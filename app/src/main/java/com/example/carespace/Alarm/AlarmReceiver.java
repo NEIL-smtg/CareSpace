@@ -1,4 +1,4 @@
-package com.example.carespace.TimerAlarm;
+package com.example.carespace.Alarm;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -23,10 +23,14 @@ public class AlarmReceiver extends BroadcastReceiver {
         NotificationCompat.Builder builder = null;
 
         Intent i = new Intent(context,Alarm.class);
+
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context,0,i,0);
 
         String alarm_type = intent.getStringExtra("alarm_type");
+        int pending_id = intent.getIntExtra("pending_ID",-1);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(context,pending_id,i,0);
+
 
         if (alarm_type.equals(WATER_ALARM))
         {
