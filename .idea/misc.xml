@@ -7,8 +7,11 @@
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/background_gradient.xml" value="0.1945" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/border.xml" value="0.1975" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/grey_shield.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_launcher_background.xml" value="0.176" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_play.xml" value="0.1945" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_previous.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_profile.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_run.xml" value="0.176" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_skip.xml" value="0.1945" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_edge.xml" value="0.1975" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_edge_grey.xml" value="0.1945" />
@@ -36,6 +39,7 @@
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/custom_alarm_card.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/custom_alarm_comfirmation_dialog.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_camera.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_exercise.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_gallery.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_profile.xml" value="0.21927083333333333" />

@@ -23,6 +23,9 @@ public class TabPageAdapter extends FragmentStateAdapter {
                 return new SleepFragment();
 
             case 2:
+                return new ExerciseFragment();
+
+            case 3:
                 return new ProfileFragment();
 
             default:

@@ -52,6 +52,8 @@ public class Alarm extends AppCompatActivity {
     private static final String MEDICINE_ALARM = "medicine_alarm";
     private static final String CUSTOM_ALARM = "custom_alarm";
 
+    private static final int INTERVAL = 60*1000;
+
     //list view adapter
     AlarmListAdapter listAdapter;
 
@@ -314,7 +316,6 @@ public class Alarm extends AppCompatActivity {
                     alarm_time_txt.setText("Your Alarm :" + alarmTime );
                 }
 
-
                 calendar = Calendar.getInstance();
                 calendar.set(Calendar.HOUR_OF_DAY, customAlarmtimePicker.getHour());
                 calendar.set(Calendar.MINUTE, customAlarmtimePicker.getMinute());
@@ -340,7 +341,7 @@ public class Alarm extends AppCompatActivity {
     {
         alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-        final int pending_id = (int) System.currentTimeMillis();
+        final int pending_id = (int) calendar.getTimeInMillis();
 
         Intent intent = new Intent(this,AlarmReceiver.class);
         intent.putExtra("alarm_type",alarm_type);
@@ -363,8 +364,6 @@ public class Alarm extends AppCompatActivity {
 
     private void setRepeatingAlarm(int repeating_gap, String alarm_type)
     {
-        Calendar cal = Calendar.getInstance();
-
         alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
         final int pending_id = (int) System.currentTimeMillis();
@@ -384,11 +383,11 @@ public class Alarm extends AppCompatActivity {
 
         pendingIntent = PendingIntent.getBroadcast(this,pending_id,intent,0);
 
-        alarmManager.setRepeating
+        alarmManager.setInexactRepeating
                 (
                         AlarmManager.RTC_WAKEUP,
-                        cal.getTimeInMillis(),
-                        repeating_gap*1000*60,
+                        System.currentTimeMillis() + INTERVAL,
+                        repeating_gap * INTERVAL,
                         pendingIntent
                 );
 

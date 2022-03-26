@@ -1,4 +1,4 @@
-package com.example.carespace;
+package com.example.carespace.Nearby;
 
 import org.json.JSONArray;
 import org.json.JSONException;

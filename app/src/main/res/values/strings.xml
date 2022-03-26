@@ -36,4 +36,11 @@
     <string name="medicine_alarm">Medicine Alarm</string>
     <string name="custom_alarm">Custom Alarm</string>
 
+    <!-- Exercise fragment -->
+    <string name="exercise">Exercise</string>
+    <string name= "upload_video">Upload Video</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

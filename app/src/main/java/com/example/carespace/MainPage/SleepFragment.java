@@ -1,20 +1,18 @@
 package com.example.carespace.MainPage;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
-import com.example.carespace.Play.playAudio;
+import com.example.carespace.PlayAudio.AudioAdapter;
+import com.example.carespace.PlayAudio.SleepRecyclerViewAdapter;
+import com.example.carespace.PlayAudio.playAudio;
 import com.example.carespace.R;
 
 public class SleepFragment extends Fragment implements SleepRecyclerViewAdapter.onItemClickListener {

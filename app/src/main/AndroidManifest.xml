@@ -21,7 +21,7 @@
             android:name=".Alarm.Alarm"
             android:exported="false" />
         <activity
-            android:name=".Play.playAudio"
+            android:name=".PlayAudio.playAudio"
             android:exported="false" />
         <activity
             android:name=".MainPage.MainPage"
@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".Alarm.AlarmReceiver"/>
+        <receiver android:name=".Alarm.AlarmReceiver" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

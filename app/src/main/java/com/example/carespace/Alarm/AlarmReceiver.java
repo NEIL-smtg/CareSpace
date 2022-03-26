@@ -36,7 +36,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         {
             //notification layout
             builder = new NotificationCompat.Builder(context, "foxandroid")
-                    .setSmallIcon(R.drawable.ic_launcher_background)
+                    .setSmallIcon(R.drawable.ic_alarm)
                     .setContentTitle("CareSpace")
                     .setContentText("Time to get hydrated !! Drink !!")
                     .setAutoCancel(true)
@@ -48,7 +48,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         {
             //notification layout
             builder = new NotificationCompat.Builder(context, "foxandroid")
-                    .setSmallIcon(R.drawable.ic_launcher_background)
+                    .setSmallIcon(R.drawable.ic_alarm)
                     .setContentTitle("CareSpace")
                     .setContentText("Don't forget to eat your medicine ~~")
                     .setAutoCancel(true)
@@ -62,7 +62,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
             //notification layout
             builder = new NotificationCompat.Builder(context, "foxandroid")
-                    .setSmallIcon(R.drawable.ic_launcher_background)
+                    .setSmallIcon(R.drawable.ic_alarm)
                     .setContentTitle("CareSpace")
                     .setContentText(alarm_description)
                     .setAutoCancel(true)
