@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="16dp"
+    android:clickable="true"
+    android:id="@+id/tutorial_card">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+       <ImageView
+           android:id="@+id/tutorial_img"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:src="@drawable/grey_shield"
+           android:background="@drawable/arm_1"
+           />
+
+        <TextView
+            android:id="@+id/tutorial_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/abs_t1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/white"
+            android:shadowColor="@color/blue"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_above="@+id/tutorial_info"
+            />
+
+        <TextView
+            android:id="@+id/tutorial_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/abs_level_1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/white"
+            android:shadowColor="@color/blue"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

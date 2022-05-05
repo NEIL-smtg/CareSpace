@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.Login"
+    >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg" />
+
+    <ImageView
+        android:id="@+id/shield"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/darker_shield"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:padding="10dp"
+        android:text="@string/uppercase_app_name"
+        android:textColor="#B7FFFFFF"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_wEmail_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small.Inverse"
+            android:text="@string/register_with_email_title"
+            android:background="@drawable/button_bg"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_edit"
+            android:drawablePadding="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logInbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_wEmail_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:drawableEnd="@drawable/ic_info"
+            android:drawablePadding="10dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/login_to_existing_account_title"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small.Inverse"
+            android:textColor="@color/black" />
+
+
+        <com.developer.gbuttons.GoogleSignInButton
+            android:id="@+id/google_signInbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="          Sign In With Google"
+            android:layout_below="@+id/logInbtn"
+            android:layout_marginTop="20dp"
+            app:isDarkTheme="true"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

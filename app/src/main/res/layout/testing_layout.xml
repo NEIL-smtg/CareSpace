@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="20dp"
+    android:clickable="true"
+    android:focusable="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/teal_700"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Your Appointment is at"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="23 March 2022, 3:30pm"/>
+
+
+        <RelativeLayout
+            android:id="@+id/docInfoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateTime"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/docTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="With"
+                android:layout_centerHorizontal="true"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/docImg"
+                android:src="@drawable/abs_2"
+                android:layout_below="@+id/docTitle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/docName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/docImg"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="Dr. Drake Ramorey"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/docDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/docName"
+                android:text="Neurology"
+                android:layout_centerHorizontal="true"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/locationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/docDepartment"
+                android:textColor="@color/grey"
+                android:layout_marginTop="5dp"
+                android:text="At"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationTitle"
+                android:text="Kajang Specialist Hospital"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

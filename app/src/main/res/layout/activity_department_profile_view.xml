@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClinicHospitalView.ClinicHospitalProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/vp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vp_layout"
+                >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Hospital Columbia"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/followBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:text="@string/follow_title"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:background="@drawable/rounded_corner_bg" />
+
+                <TextView
+                    android:id="@+id/introtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_alignStart="@+id/name"
+                    android:layout_marginTop="30dp"
+                    android:text="Introduction"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/introtv"
+                    android:layout_alignStart="@+id/name"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Surpassing two decades of providing private healthcare, Columbia Asia continues to bring reliable and affordable medical services through our 13 hospitals in Malaysia. These medical facilities are strategically located in residential areas to fulfil the healthcare needs of its residents and surrounding neighborhoods." />
+
+
+                <TextView
+                    android:id="@+id/infotv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_alignStart="@+id/name"
+                    android:layout_marginTop="20dp"
+                    android:text="Information"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/info_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/infotv"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorGrey">
+
+                        <TextView
+                            android:id="@+id/hourtv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:drawablePadding="10dp"
+                            android:text="Working :"
+                            app:drawableStartCompat="@drawable/ic_alarm"
+                            app:drawableTint="@color/red" />
+
+                        <TextView
+                            android:id="@+id/workingHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/hourtv"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/hourtv"
+                            android:text="24 Hours" />
+
+                        <TextView
+                            android:id="@+id/contacttv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/hourtv"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:drawablePadding="10dp"
+                            android:text="Number :"
+                            app:drawableStartCompat="@drawable/ic_phone"
+                            app:drawableTint="#00E676" />
+
+                        <TextView
+                            android:id="@+id/contactNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/workingHours"
+                            android:layout_alignTop="@+id/contacttv"
+                            android:layout_toEndOf="@+id/contacttv"
+                            android:autoLink="phone"
+                            android:text="03 5854 543" />
+
+                        <TextView
+                            android:id="@+id/addresstv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/contactNum"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:drawablePadding="10dp"
+                            android:text="Address :"
+                            app:drawableStartCompat="@drawable/ic_map"
+                            app:drawableTint="#FF9100" />
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/workingHours"
+                            android:layout_alignTop="@+id/addresstv"
+                            android:layout_toEndOf="@+id/addresstv"
+                            android:autoLink="map"
+                            android:paddingBottom="10dp"
+                            android:text="Univillage, Jalan Broga, 43500, Semenyih" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/browseDocTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_container"
+                    android:layout_alignStart="@+id/name"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:text="Meet Our Doctors"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:focusable="true"
+                    app:drawableEndCompat="@drawable/ic_small_arrow"
+                    app:drawableTint="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/browseDocTV"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/mini_doctor_item" />
+
+
+                <TextView
+                    android:id="@+id/browseShopTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_doctor"
+                    android:layout_alignStart="@+id/name"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Browse Shop"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_small_arrow"
+                    app:drawableTint="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/browseShopTV"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/mini_shop_item"
+                    android:layout_marginBottom="50dp"/>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@drawable/white_circle_bg"
+        android:layout_margin="10dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Appointment.AppointmentEditView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/snippet_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/teal_700">
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_backward"
+                    android:backgroundTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/viewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@id/back"
+                    android:text="Edit"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/headsUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/snippet_top"
+                android:layout_margin="20dp"
+                android:text="@string/editTimeSlot_headsUp"
+                android:textColor="@color/grey"
+                android:textStyle="italic" />
+
+            <RelativeLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headsUp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="Name :" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@+id/nameTV"
+                    android:hint="Type your name"
+                    android:inputType="textPersonName"
+                    android:maxLength="40"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/borndateLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameLayout"
+                android:layout_alignStart="@+id/nameLayout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/bornDateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Born Date :"
+                    android:layout_centerVertical="true"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bornDatePickerBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/bornDateTV"
+                    android:background="@drawable/rounded_edge"
+                    android:backgroundTint="@color/colorGrey"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Pick" />
+
+                <TextView
+                    android:id="@+id/bornDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/bornDatePickerBtn"
+                    android:textColor="@color/grey" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contactLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/borndateLayout"
+                android:layout_alignStart="@+id/nameLayout"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/contactTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20dp"
+                    android:text="Contact :" />
+
+
+                <EditText
+                    android:id="@+id/contactNum"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toRightOf="@+id/contactTV"
+                    android:hint="012-24234423"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contactLayout"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/nameLayout">
+
+                <TextView
+                    android:id="@+id/emailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail :"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/emailTV"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress"
+                    android:hint="example123@gmail.com"
+                    android:maxLength="40"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/descLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailLayout"
+                android:layout_marginTop="20dp"
+                android:layout_alignStart="@id/nameLayout">
+
+                <TextView
+                    android:id="@+id/descTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description :"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/descTV"
+                    android:layout_marginStart="20dp"
+                    android:textSize="14sp"
+                    android:inputType="textMultiLine"
+                    android:hint="Describe your problem"
+                    android:maxLength="40"
+                    />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_edge"
+                android:backgroundTint="@color/colorGrey"
+                android:src="@drawable/ic_forward_arrow" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

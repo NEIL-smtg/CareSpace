@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="20dp"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/doctor5" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/img"
+            android:text="Dr. Benedict Cumberbatch"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/img"
+            android:layout_alignStart="@id/name"
+            android:textColor="@color/grey"
+            android:text="Heart Surgeon"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/workingHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/department"
+            android:layout_alignStart="@id/name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/img"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="5dp"
+            android:drawableTint="#76FF03"
+            android:text="10:00 - 14:00"
+            />
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/workingHours"
+            android:layout_alignStart="@id/name"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/img"
+            android:drawableStart="@drawable/ic_money_sign"
+            android:drawablePadding="5dp"
+            android:drawableTint="#FFC400"
+            android:text="RM 20"
+             />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/img"
+            android:drawableStart="@drawable/ic_small_rating"
+            android:drawablePadding="10dp"
+            android:drawableTint="#FFC400"
+            android:text="4.3" />
+
+        <TextView
+            android:id="@+id/appointmentBtn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/rating"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_bg"
+            android:clickable="true"
+            android:paddingTop="5dp"
+            android:text="Appointment"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+             />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

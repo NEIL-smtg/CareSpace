@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/orange_rectangle"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img"
+        android:layout_alignTop="@+id/img"
+        android:text="NEIL.SUNDAE"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img"
+        android:layout_alignBottom="@+id/img"
+        android:text="2019/10/27 22:09"
+        android:textSize="12sp"
+        android:textColor="@color/grey" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/RatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_below="@+id/timestamp"
+        android:layout_toRightOf="@+id/img"
+        android:layout_alignStart="@id/name"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:scaleX=".75"
+        android:scaleY=".75"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:rating="3.8"
+        />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/pose1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        android:layout_below="@+id/comment"
+        />
+
+    <ImageButton
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/deleteBtn"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_edit"
+        android:layout_alignTop="@+id/img"
+        android:visibility="invisible"
+        />
+
+    <ImageButton
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_delete"
+        android:layout_alignTop="@+id/img"
+        android:visibility="invisible"
+        />
+</RelativeLayout>

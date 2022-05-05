@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercise.TutorialView"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/gif_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/numTurns_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set 1"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/takeAbreak_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:text="TAKE A BREAK"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:textAlignment="center"
+                    />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gif"
+                    android:layout_below="@+id/numTurns_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="60dp"
+                    android:src="@drawable/exercise_1" />
+
+                <ImageButton
+                    android:id="@+id/forward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_edge_grey"
+                    android:src="@drawable/ic_forward" />
+
+                <ImageButton
+                    android:id="@+id/backward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_backward"
+                    android:background="@drawable/rounded_edge_grey"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timer_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gif_layout"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ImageView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_circle" />
+
+                <TextView
+                    android:id="@+id/timer_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="30"
+                    android:textAlignment="center"
+                    android:textSize="40sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/startBtn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timer_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/startPauseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/orange_rectangle" />
+
+                <TextView
+                    android:id="@+id/startPauseBtn_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="START"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/instruction_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/startBtn_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                >
+
+                <TextView
+                    android:id="@+id/instructionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/nice_rectangle"
+                    android:paddingStart="20dp"
+                    android:paddingTop="7dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:text="How To Do This"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:padding="20dp"
+                    android:layout_below="@+id/instructionTitle"
+                    android:textSize="20sp"
+                    android:text="@string/pose12"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:background="#ECEDE8"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

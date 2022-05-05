@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <VideoView
+        android:id="@+id/video_view_row"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/title_video_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="Title of the video"
+        android:layout_above="@id/time_video_row"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/time_video_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/video_view_row"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:shadowRadius="2"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        android:text="dd/MM/yyyy hh:mm"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

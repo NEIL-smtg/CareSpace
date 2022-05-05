@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/alarm_picker_selector_dialog.xml" value="0.1745" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/background_gradient.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/border.xml" value="0.1975" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/border_2.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/button_bg.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/chat_bg_left.xml" value="0.2" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/chat_bg_right.xml" value="0.1915" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/chat_btn_bg.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/darker_shield.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/green_rectangle.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/grey.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/grey_shield.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_alarm.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_clock.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_comment_null.xml" value="0.1795" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_forward_arrow.xml" value="0.1765" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_info.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_launcher_background.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_mini_money_sign.xml" value="0.178" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_money_sign.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_play.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_previous.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_profile.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_run.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_skip.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_small_rating.xml" value="0.178" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_tick.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/ic_work.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/orange.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rating_bar.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rectangle_border.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_corner_bg.xml" value="0.1905" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_edge.xml" value="0.1975" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_edge_grey.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_edge_orange.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/rounded_top_layout_bg.xml" value="0.207" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/tab_layout_style.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/drawable/timer_card_gradient.xml" value="0.1945" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_add_post.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_add_review.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_alarm.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_appointment_detail_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_appointment_edit_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_appointment_info_layout.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_appointment_info_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_appointment_picker_view.xml" value="0.17657118426678067" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_appointment_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_chat.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_chat_user_list.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_clinic_hospital_profile.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_clinic_hospital_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_comment_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_daily_infomation.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_department_doctor_list_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_department_profile_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_department_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_discover_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_doctor_list_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_doctor_profile_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_edit_profile.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_following_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_gallery_camera_fragment_container.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_get_customer_info.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_item_view.xml" value="0.17072181670721817" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_log_out.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_loginto_existing_acc.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_main_page.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_my_discover_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_my_favourites_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_nearby_search.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_play_audio.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_post_comment_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_review_view.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_search.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_shop_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_timer_alarm.xml" value="0.176" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/activity_tutorial_introduction.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/add_alarm_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/addalarm_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/addtimer_card.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/alarm_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/alarm_picker_dialog.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/alarmpicker_dialog.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/appointment_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/audio_card.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/back_btn.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/chat_card_btn.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/chat_item_left.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/chat_item_right.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/chat_user_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/clinic_hospital_cardbtn.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/clinic_hospital_recommend_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/clinic_hostpital_toprated_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/comment_row.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/custom_alarm_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/custom_alarm_comfirmation_dialog.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/department_doctor_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/department_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/discover_cardbtn.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/doctor_recommend_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/doctor_review_item.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/doctor_row_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_adaptive_view.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_camera.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_exercise.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_gallery.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_history_appointment.xml" value="0.16246259085079093" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_sleep.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/fragment_upcoming_appointment.xml" value="0.17657118426678067" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/item_appointment.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/medicine_alarm_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/mini_doctor_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/mini_exclusive_item.xml" value="0.536" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/mini_shop_item.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/nearby_card_view.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/outdated_appointment_item.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/podcast_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/post_item.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/reviews_item.xml" value="0.17999144933732364" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/search_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/shop_item.xml" value="0.4" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/testing.xml" value="0.1658828559213339" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/testing_layout.xml" value="0.17657118426678067" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/time_picker.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/time_slot_item.xml" value="0.264" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/walkthrough_slide_layout.xml" value="0.2" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/water_alarm_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/layout/wateralarm_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/sungh/AndroidStudioProjects/CareSpace/app/src/main/res/xml/file_paths.xml" value="0.21927083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

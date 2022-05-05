@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_profilePic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/orange_rectangle"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:id="@+id/post_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/post_profilePic"
+        android:layout_alignTop="@+id/post_profilePic"
+        android:text="NEIL.SUNDAE"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/post_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/post_profilePic"
+        android:layout_alignBottom="@+id/post_profilePic"
+        android:text="2019/10/27 22:09"
+        android:textSize="12sp"
+        android:textColor="@color/grey"/>
+
+    <TextView
+        android:id="@+id/post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_profilePic"
+        android:layout_alignStart="@+id/post_profilePic"
+        android:text="Today is a great day, exercise good, workout good, continue to workout"
+        android:textSize="18sp"
+        />
+
+    <ImageView
+        android:id="@+id/post_img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/post_title"
+        android:background="@drawable/abs_1"
+        android:layout_margin="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/post_likeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/post_profilePic"
+        android:layout_alignBottom="@+id/post_likeNum"
+        android:background="@drawable/likebtn_pressed"
+         />
+
+    <TextView
+        android:id="@+id/post_likeNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_img"
+        android:layout_toRightOf="@id/post_likeBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="25 Likes"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/post_commentNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_img"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/post_likeNum"
+        android:text="25 Comments"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        />
+
+
+    <Button
+        android:id="@+id/publishBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/post_likeNum"
+        android:layout_marginEnd="10dp"
+        android:layout_alignTop="@+id/post_ET"
+        android:background="@drawable/rounded_edge_grey"
+        android:text="PUBLISH"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:backgroundTint="@null"
+        android:clickable="false"/>
+
+    <EditText
+        android:id="@+id/post_ET"
+        android:layout_toLeftOf="@+id/publishBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/post_likeNum"
+        android:layout_alignStart="@+id/post_profilePic"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edge"
+        android:backgroundTint="@color/colorGrey"
+        android:hint="Comment something..."
+        android:inputType="textMultiLine"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_below="@+id/post_ET"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        />
+
+</RelativeLayout>

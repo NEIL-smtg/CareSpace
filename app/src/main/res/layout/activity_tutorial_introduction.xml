@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercise.TutorialIntroduction"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/snippet_bottom">
+
+    <!-- img view layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/imgView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            >
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/abs_1"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/grey_shield" />
+
+        </RelativeLayout>
+
+        <!-- course title layout -->
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_below="@+id/imgView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/abs_t1"
+                android:layout_marginTop="20dp"
+                android:paddingStart="20dp"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:text="@string/abs_level_1"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pplTrained"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/level"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/people_trained_title"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/favouritesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pplTrained"
+                android:layout_alignEnd="@+id/pplTrained"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/add_favourites_title"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:background="@drawable/rounded_corner_bg" />
+            
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/favouritesBtn"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                />
+
+        </RelativeLayout>
+
+        <!-- course info layout -->
+        <RelativeLayout
+            android:id="@+id/info_layout"
+            android:layout_below="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="30dp"
+                android:paddingEnd="20dp"
+                android:text="@string/pose1" />
+
+        </RelativeLayout>
+
+        <!--comment session -->
+        <RelativeLayout
+            android:id="@+id/comment_layout"
+            android:layout_below="@id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/comment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMMENTS"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/comment_title"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@color/teal_700" />
+
+            <EditText
+                android:id="@+id/comment_ET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/comment_title"
+                android:layout_alignTop="@+id/profilePic"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toRightOf="@+id/profilePic"
+                android:layout_toLeftOf="@+id/publishBtn"
+                android:background="@drawable/rounded_edge"
+                android:backgroundTint="@color/colorGrey"
+                android:hint="Tell me your reviews"
+                android:inputType="textMultiLine"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/publishBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profilePic"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_edge_grey"
+                android:text="PUBLISH"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:backgroundTint="@null"
+                android:clickable="false"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilePic"
+                android:layout_marginTop="30dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/comment_row" />
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:id="@+id/btnback"
+            android:src="@drawable/ic_back_arrow"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <!--Snippet bottom -->
+    <RelativeLayout
+        android:id="@+id/snippet_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            />
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edge"
+            app:backgroundTint="@null"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:text="START YOUR FIRST TRAINING"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

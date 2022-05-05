@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slide_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dots_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        >
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/slide_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dots_layout"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_backward"
+            android:backgroundTint="@color/teal_700"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/back"
+            android:text="@string/back"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/slide_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dots_layout"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:id="@+id/forward"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_forward"
+            android:backgroundTint="@color/teal_700"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/next_text"
+            />
+
+        <TextView
+            android:id="@+id/next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_title"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

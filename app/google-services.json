@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "315735526122",
+    "firebase_url": "https://carespace-3173c-default-rtdb.firebaseio.com",
+    "project_id": "carespace-3173c",
+    "storage_bucket": "carespace-3173c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315735526122:android:f3f46da00248da7d4e6593",
+        "android_client_info": {
+          "package_name": "com.example.carespace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315735526122-bpsdl85e803js7efvr0p1q9b89nfoefj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8JGJ5rgHfk1kRPwtxDptiVucLY3Tr3IE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315735526122-bpsdl85e803js7efvr0p1q9b89nfoefj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

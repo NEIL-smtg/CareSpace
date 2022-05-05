@@ -1,0 +1,201 @@
+<resources>
+    <string name="app_name">CareSpace</string>
+    <string name="uppercase_app_name">CARESPACE</string>
+    <string name="back">BACK</string>
+    <string name="Login_txt">LOGIN</string>
+    <string name="cancel">Cancel</string>
+    <string name="doubleTapExit">Please click BACK again to exit</string>
+
+    <!-- api map key -->
+    <string name="google_map_key">AIzaSyBX8uVxWm3SY56wTTaPDuBWcelRlBviUUA</string>
+
+    <!--nearby -->
+    <string name="gps_network_not_enabled">To continue, turn on device location, which uses Google\'s location service</string>
+    <string name="go_to_location_setting">Go to location setting</string>
+    <string name="nearby">Nearby Medical Center</string>
+    <string name="here">You are here</string>
+
+    <!--sleep -->
+    <string name="sleep">Sleep</string>
+    <string name="sleep_desc">Relax your mind and fall into a deep, restful sleep</string>
+    <string name="soundscape">Soundscapes</string>
+    <string name="asmr">ASMR</string>
+    <string name="sleepbetter">Sleep Better</string>
+    <string name="anxious">Anxious</string>
+    <string name="depressed">Depressed</string>
+    <string name="feelingdown">Feeling Down</string>
+    <string name="coaching">Coaching</string>
+
+    <!--TIMER/alarm-->
+    <string name="setalarm">Add Alarm</string>
+    <string name="timer_desc">Customize your own Water Alarm, Medicine Alarm and others</string>
+    <string name="addalarm">Add Alarm</string>
+    <string name="alarmtxt">Alarm</string>
+    <string name="select_alarm_type">Select Alarm Type</string>
+    <string name="water_alarm">Water Alarm</string>
+    <string name="medicine_alarm">Medicine Alarm</string>
+    <string name="custom_alarm">Custom Alarm</string>
+
+    <!-- Exercise fragment -->
+    <string name="exercise">Exercise</string>
+    <string name="upload_video">Upload Video</string>
+
+    <!--abs text-->
+    <string name="abs_t1">Tore Your Abs Apart</string>
+    <string name="abs_level_1">20 minutes 20k Calories Beginner</string>
+    <string name="abs_t2">Burn Your Abs</string>
+    <string name="abs_level_2">20 minutes 40k Calories Advanced</string>
+    <string name="abs_t3">Ultimate Abs Workout</string>
+    <string name="abs_level_3">25 minutes 60k Calories Expert</string>
+
+    <!--arm text-->
+    <string name="arm_t1">Build Your Arm</string>
+    <string name="arm_level_1">10 minutes 20k Calories Beginner</string>
+    <string name="arm_t2">Muscle Gainer</string>
+    <string name="arm_level_2">10 minutes 30k Calories Advanced</string>
+    <string name="arm_t3">Go Get It, Tiger</string>
+    <string name="arm_level_3">10 minutes 40k Calories Expert</string>
+
+    <!--yoga text -->
+    <string name="yoga_t1">Deep Breathe and Stretch</string>
+    <string name="yoga_level_1">45 minutes 10k Calories Beginner</string>
+    <string name="yoga_t2">Deep Breathe and Stretch</string>
+    <string name="yoga_level_2">45 minutes 20k Calories Advanced</string>
+    <string name="yoga_t3">Ultimate Stretching</string>
+    <string name="yoga_level_3">45 minutes 30k Calories Expert</string>
+
+    <!--instruction for abs-->
+    <string name="pose1">Step 1:- Start in the push-up position with your arms completely straight and directly beneath your shoulders.\n\nStep 2:- Your body should form a straight line from your shoulders to your ankles. \n\nStep 3:- Squeeze your abs, lift one foot off the floor and bring your knee up towards your chest while keeping your body in as straight of a line as possible.\n\nStep 4:- Return to the starting position and repeat the movement with your opposite leg..</string>
+    <string name="pose2">Step 1:- Lie flat on your mat with knees bent and feet on the mat. Hands at the base of your head and elbows pointed out. Using your abdominals bring your head and shoulders off the mat and come up into a crunch, then lower with control.</string>
+    <string name="pose3">Step 1:- This movement is performed with a bench and a foot stool.\n\nStep 2:- Place a bench behind yourself and rest on it with your hands. Place your legs straight out in front of you. You may also place them at an elevated level as shown above.\n\nStep 3:- Begin with arms in a fully. Slowly bend at your elbows keeping the rest of your body straight. Be sure to keep your elbows back and close together.\n\nStep 4:- Dip down until your arms form a 90 degree angle and you feel a stretch in the triceps.\n\nStep 5:- Slowly extend your arms raising your body back up. Pause and contract your triceps muscles at the top. Pause and repeat the movement.</string>
+    <string name="pose4">Step 1:- Lie flat on the floor with your lower back pressed to the ground (pull your navel in to also target your deep abs).\n\nStep 2:- Put your hands behind your head, then bring your knees in towards your Chest and lift your shoulder blades off the ground, but be sure not to pull on your neck.\n\nStep 3:-Straighten your right leg out to about a 4S-degree angle to the ground while turning your upper body to the left, bringing your right elbow towards the left knee.\n\nStep 4:- Make sure your rib cage is moving and not just your elbows. Now switch sides and do the same motion on the other side to complete onerep.</string>
+    <string name="pose5">Step 1:- Lay down with your hands to your sides for support.\n\nStep 2:- Raise your legs so they are off the ground, keeping the abdominals tight.\n\nStep 3:- Slowly raise your legs 90 degrees, contracting the abdominal muscles. Slowly return to starting position. Do not touch the floor with your feet.\n\n</string>
+    <string name="pose6">Step 1:- Lie on your back on an exercise mat. With your arms straight at your sides, bend your knees and place your feet flat on the floor between18 and 24 inches apart.\n\nStep 2:- Breathing out, crunch your ab slightly upward and sideways to the right a couple of inches until your right hand touches your right heel.\n\nStep 3:- Hold brief|y and then return to your starting position while inhaling. Repeat on the left side.</string>
+    <string name="pose7">Step 1:- You can perform straight-leg crunches by lying face up on the floor with your legs straight and then moving your upper body as you would for a standard bent-knee crunch.\n\nStep 2:- Alternatively, lie on your back, raise your legs so they are perpendicular to the floor and then perform the standard crunching motion with your torso.</string>
+    <string name="pose8">Step 1:- Lie down on the floor placing your feet either under something that Will not move or by having a partner hold them. Your legs should be bent at the kneesPlace your hands behind your head and lock them together by claspihg your fingers. This is the starting position.\n\nStep 2:- Elevate your upper body so that it creates an imaginary V-shape with your thighs. Breathe out when performing this part of the exercise.\n\nStep 3:- Once you feel the contraction for a second, lower your upper body back down to the starting position while inhahng. \n\nStep 4:- Repeat for the recommended amount of repetitions.</string>
+    <string name="pose9">Step 1:- Lying on the back,lift straight leg,extend opposite hand to touch toe.\n\nStep 2:- Please,return,alternate inhale down,exhale up at toe touch.</string>
+    <string name="pose10">Step 1:- High Plank position then slowly rotate your torso to the side raising your arm till it gets ihlihe with the other one.\n\nStep 2:- Then return to the initial position.</string>
+    <string name="pose11">Step 1:- Lie on the floor with elbows directly beneath your shoulders and legs fully extended.\n\nStep 2:- Raise your torso into the air until it makes a straight line from your shoulders to your ankles. Tighten your stomach, squeeze your butt.</string>
+    <string name="pose12">Step 1:- Lie down on the floor placing your feet either under something that will not move or by having a partner hold them. Your legs should be bent at the knees. Elevate your upper body so that it creates an imaginary V-shape with your thighs.\n\nStep 2:- Your arms should be fully extended in front of you perpendicular to your torso and with the hands clasped. This is the starting position.\n\nStep 3:- This is the starting position. Twist your torso to the right side until your arms are parallel with the floor while breathing out.\n\nStep 4:- Hold the contraction for a second and move back to the starting position while breathing out. Now move to the opposite side performing the same techniques you applied to the right side. Repeat for the recommended amount of repetitions.</string>
+    <string name="pose13">Step 1:- Lie on your back with your knees bent, feet flat and hip width.\n\nStep 2:- Lower your pelvis 2 inches from the floor. Squeeze your glutes and lift your pelvis back to bridge position.</string>
+    <string name="pose14">Step 1:- Lie your face down on the floor with your arms extended in front of you and your leg extended behind you.\n\nStep 2:- In one movement,engage your glutes and lower back to raise your arms,legs,and chest off the floor.\n\nStep 3:- Hold for a count,then slowly return to the starting position.</string>
+    <string name="pose15">Step 1:- Stand, extend arms 90° to sides, bend forward 90° at waist.\n\nStep 2:- Looking at the floor, rotate torso to touch hand to foot, rotate for other hand. \n\nStep 3:- Head will follow chest action.</string>
+
+    <string name="abs_description"><b>Course introduction</b>\n\nThe world\'s \"most popular\"abdominal training session, build abdominal muscle lines in every area! It is recommended to practice every other day. After 2\-4 weeks, the abdominal muscles will become very noticeable, then you can start training with the advanced level.\n\n\n<b>Course Type</b>\n\nAbdominal training\n\n\n<b>Suitable for</b>\n\nTrainers who want to strengthen their abdomen.\n\n\n<b>Not suitable for</b>\n\nSuffer from diabetes, cardiovascular and cerebrovascular diseases, people with diseases and other metabolic diseases;\n\nPeople with orthopedic injuries who have not yet recovered;\n\nAnd other doctors suggest people who are not suitable for exercise.\n\n\n<b>Preparation before practice</b>\n\nDon\'t eat too much before training, otherwise it will be in training. It may cause abdominal discomfort;\n\n\n<b>Physical reaction</b>\n\nIf you are facing short of breathe and abdominal muscle soreness during training session, this is normal; if the training is difficult to complete, it means that the course is too difficult for you at this stage. It is proposed to choose a simpler abdominal training course.\n\nThe soreness of abdominal muscles may be completed after training. It will still exists for 2\-3 days or even a week. Please don\'t panic. This is a normal delayed muscle. It is a positive feedback;\n\nIf there is \"lumbar back pain\" during the training process, please stop training.\n\n\n<b>Course suggestions</b>\n\nThis course is a Level 1 difficulty abdominal training course. It is recommended to practice every other day.\n\nWhen you can\'t complete the movement with the abdominal muscles, don\'t force yourself;</string>
+
+    <!--appointment string -->
+    <string name="appointment_desc">Scheduled an Appointment with Doctor only one click away</string>
+
+    <!--clinic hostpital -->
+    <string name="clinicHospital_desc">Check Out Local Hospital</string>
+
+    <!--department spinner item -->
+    <string-array name="department">
+        <item>Neurology</item>
+        <item>Obstetrics</item>
+        <item>Ophthalmology</item>
+        <item>Optometry</item>
+        <item>Orthopedics</item>
+        <item>Pediatrics</item>
+        <item>Psychiatry</item>
+        <item>Radiology</item>
+        <item>Stomatology</item>
+        <item>Dermatology</item>
+    </string-array>
+
+    <!--patient info -->
+    <string name="patient_info_title">Fill Up Your Information</string>
+    <string name="your_appt">Your Appointment</string>
+
+    <!--edit time slot -->
+    <string name="editTimeSlot_headsUp">If you wish to change the time for the appointment, you will need to rescheduled for a new appointment for your desired time.</string>
+
+    <!--review hint -->
+    <string name="review_hint">Tell everyone about the doctor…</string>
+
+    <!--title-->
+    <string name="rate_the_doc">Rate the doctor :</string>
+    <string name="shop_title">SHOP</string>
+    <string name="RM">RM</string>
+    <string name="sold_title">sold</string>
+    <string name="reviewsTitle">Reviews/Comments</string>
+    <string name="department_title">Department</string>
+    <string name="doctorsTitle">Doctors</string>
+    <string name="delivery_detail_title">Delivery detail</string>
+    <string name="place_order_title">PLACE ORDER</string>
+    <string name="order_information_title">Order Information</string>
+    <string name="message_hint">Send a message…</string>
+    <string name="chat_title">Chat</string>
+    <string name="following_title">Following</string>
+    <string name="discover_title">Discover</string>
+    <string name="favourite_title">Favourites</string>
+    <string name="logout_title">LOGOUT</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="change_profile_picture_title">Change Profile Picture</string>
+    <string name="name_edittext_title">Name :</string>
+    <string name="name_hint">Type your name</string>
+    <string name="contact_edittext_title">Contact :</string>
+    <string name="contactNum_hint">012-24234423</string>
+    <string name="email_edittext_title">E-mail :</string>
+    <string name="email_hint">example123@gmail.com</string>
+    <string name="address_edittext_title">Adrress :</string>
+    <string name="address_hint">Your address</string>
+    <string name="orderid_title">OrderID :</string>
+    <string name="product_price_title">Product Price :</string>
+    <string name="delivery_fees_title">Delivery Fees :</string>
+    <string name="total_title">Total :</string>
+    <string name="username_title">Username :</string>
+    <string name="password_title">Password :</string>
+    <string name="retype_password_title">Retype Password</string>
+    <string name="confirm_password_title">Confirm Password :</string>
+    <string name="registration_title">Registration</string>
+    <string name="register_title">register</string>
+    <string name="unavailable_title">Unavailable</string>
+    <string name="add_favourites_title">+ Favourites</string>
+    <string name="people_trained_title">people trained</string>
+    <string name="added_favourites_title"> Added</string>
+    <string name="follow_title">+ Follow</string>
+    <string name="introduction_title">Introduction</string>
+    <string name="information_title">Information</string>
+    <string name="working_editText">Working :</string>
+    <string name="meet_our_doctors_title">Meet Our Doctors</string>
+    <string name="browse_shop_title">Browse Shop</string>
+    <string name="appointment_title">Appointment</string>
+    <string name="reviews_comments_title">Reviews/Comments</string>
+    <string name="no_comment_title">There is no comment right now</string>
+    <string name="chat_now_title">Chat Now</string>
+    <string name="my_following_title">My Following</string>
+    <string name="my_post_title">My Post</string>
+    <string name="login_to_existing_account_title">Login to existing account</string>
+    <string name="register_with_email_title">Register With Email</string>
+    <string name="forgot_password_title">Forgot password ? Press here</string>
+    <string name="login_title">login</string>
+    <string name="ios_back_title"><![CDATA[<back]]></string>
+    <string name="clinic_hospital_title">Clinic Hospital</string>
+    <string name="conversation_title">Conversation</string>
+    <string name="check_your_messages_title">Check Your Messages</string>
+    <string name="next_title">NEXT</string>
+    <string name="finish_title">Finish</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="water_time_gap_title">Set Time Gap of Water Alarm</string>
+    <string name="medicine_time_gap_title">Set Time Gap of Medicine Alarm</string>
+    <string name="done_title">Done</string>
+    <string name="publish_title">Publish</string>
+    <string name="add_post_title">Add Post</string>
+    <string name="write_something_hint">Write something...</string>
+    <string name="upload_image_title">Upload Image</string>
+
+
+    <string-array name="shipping_company">
+        <item>DHL</item>
+        <item>PosLaju</item>
+        <item>Ninja Van</item>
+    </string-array>
+
+    <string-array name="shipping_cost">
+        <item>5.7</item>
+        <item>5.3</item>
+        <item>5.5</item>
+    </string-array>
+
+</resources>

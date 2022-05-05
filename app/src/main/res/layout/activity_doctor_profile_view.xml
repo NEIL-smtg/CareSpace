@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorView.DoctorProfileView"
+    >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/abs_1" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_below="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Dr. Drake Ramorey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:text="Neurology Specialist"
+                android:layout_marginTop="10dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/department"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:rating="4.5"
+                android:theme="@style/RatingBar"
+                android:numStars="5"/>
+
+            <TextView
+                android:id="@+id/ratingInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_centerHorizontal="true"
+                android:text="(145 Reviews)"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingInfo"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGrey"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="@string/information_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_info" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info"
+                    android:layout_alignStart="@+id/info"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="Very friendly fuck a lot of people"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_tick"
+                    app:drawableTint="#76FF03" />
+
+                <TextView
+                    android:id="@+id/workingHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_alignStart="@+id/info"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="08:00 - 17:00"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_alarm"
+                    app:drawableTint="@color/red" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/workingHours"
+                    android:layout_alignStart="@+id/description"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="RM 20/hour"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_money_sign"
+                    app:drawableTint="#FFC400" />
+
+                <TextView
+                    android:id="@+id/workingExperience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/price"
+                    android:layout_alignStart="@+id/description"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="12dp"
+                    android:text="15 years of working experience"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_work" />
+
+                <RelativeLayout
+                    android:id="@+id/mainBtnLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/workingExperience"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/chatBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/chat_btn_bg"
+                        android:clickable="true"
+                        android:drawablePadding="10dp"
+                        android:focusable="true"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/chat_now_title"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_appointment" />
+
+
+                    <TextView
+                        android:id="@+id/appointmentBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/chatBtn"
+                        android:background="@drawable/button_bg"
+                        android:clickable="true"
+                        android:drawablePadding="10dp"
+                        android:focusable="true"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/appointment_title"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_appointment" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/followBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainBtnLayout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:text="@string/follow_title"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:background="@drawable/rounded_corner_bg" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/reviewsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_layout"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/reviews_comments_title"
+                android:textColor="#3D5AFE"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/viewAllCommentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_alignTop="@+id/reviewsTV"
+                android:textSize="14sp"
+                android:text="View All \>"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reviewsTV"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/doctor_review_item" />
+
+            <TextView
+                android:id="@+id/CommentNullTV"
+                android:visibility="invisible"
+                android:layout_below="@+id/reviewsTV"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_comment_title"
+                android:textSize="14sp"
+                android:textColor="@color/grey"
+                app:drawableTopCompat="@drawable/ic_comment_null" />
+
+        </RelativeLayout>
+        
+
+        
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@drawable/white_circle_bg"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

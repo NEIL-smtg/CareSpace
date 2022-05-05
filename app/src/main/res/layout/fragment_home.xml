@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage.HomeFragment"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--nearby card -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout_nearby">
+
+                <include layout="@layout/nearby_card_view" />
+
+            </RelativeLayout>
+
+            <!--timer card -->
+            <RelativeLayout
+                android:id="@+id/timer_relayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relayout_nearby">
+
+                <include layout="@layout/add_alarm_card"/>
+
+            </RelativeLayout>
+
+            <!--appointment btn -->
+            <RelativeLayout
+                android:id="@+id/appointment_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relayout_nearby"
+                android:layout_alignParentEnd="true">
+
+                <include layout="@layout/item_appointment" />
+
+            </RelativeLayout>
+
+
+            <!-- Discover layout -->
+            <RelativeLayout
+                android:id="@+id/discover_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timer_relayout"
+                android:layout_alignParentEnd="true">
+
+                <include layout="@layout/discover_cardbtn" />
+
+            </RelativeLayout>
+
+            <!--check out clinic hospital -->
+            <RelativeLayout
+                android:id="@+id/clinic_hospital_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discover_layout"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="200dp">
+
+                <include layout="@layout/clinic_hospital_cardbtn" />
+
+            </RelativeLayout>
+
+
+            <!--chat -->
+            <RelativeLayout
+                android:id="@+id/chat_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/discover_layout"
+                android:layout_alignParentEnd="true">
+
+                <include layout="@layout/chat_card_btn" />
+
+            </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
